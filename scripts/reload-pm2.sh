@@ -9,4 +9,3 @@ sudo docker-compose -f /home/ubuntu/aws-codedeploy/ run --rm web yarn install
 sudo docker-compose -f /home/ubuntu/aws-codedeploy/ run web rails db:migrate
 sudo docker-compose -f /home/ubuntu/aws-codedeploy/ run web rails db:migrate RAILS_ENV=development
 sudo docker-compose -f /home/ubuntu/aws-codedeploy/docker-compose.yml up -d  
-pm2 startOrReload ecosystem.config.js
