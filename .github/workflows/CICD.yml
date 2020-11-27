@@ -32,6 +32,7 @@ jobs:
       db:
         env:
           POSTGRES_HOST_AUTH_METHOD: trust
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         image: postgres:12.4
         ports: ['5432:5432']
         options: >-
@@ -41,10 +42,7 @@ jobs:
           --health-retries 5
 
     runs-on: ubuntu-latest
-
     steps:
-      env: 
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: trust
     - uses: actions/checkout@v2
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
