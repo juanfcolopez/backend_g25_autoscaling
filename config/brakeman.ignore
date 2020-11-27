@@ -1,0 +1,26 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Mass Assignment",
+      "warning_code": 105,
+      "fingerprint": "f0a617b4e8d3c178c81f003cb62b4cd3299cef45bab1cd56343149dd60977774",
+      "check_name": "PermitAttributes",
+      "message": "Potentially dangerous key allowed for mass assignment",
+      "file": "app/controllers/balances_controller.rb",
+      "line": 96,
+      "link": "https://brakemanscanner.org/docs/warning_types/mass_assignment/",
+      "code": "params.require(:balance).permit(:clearedbalance, :unclearedbalance, :basic_id, :transfer_id, :debt_id, :account_id)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "BalancesController",
+        "method": "balance_params"
+      },
+      "user_input": ":account_id",
+      "confidence": "High",
+      "note": ""
+    }
+  ],
+  "updated": "2020-11-13 16:48:50 +0000",
+  "brakeman_version": "4.9.1"
+}
