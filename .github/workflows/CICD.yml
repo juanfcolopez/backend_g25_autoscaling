@@ -20,13 +20,19 @@ on:
 
 jobs:
   test:
-    strategy:
-        matrix:
-          DATABASE_URL: ['postgresql://localhost/postgres']
-          POSTGRES_DB: ['postgres']
-          POSTGRES_USER: ['postgres']
-          POSTGRES_PASSWORD: ['password']
-          RAILS_ENV: ['test']
+    env:
+      DATABASE_URL: postgresql://localhost/postgres
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      RAILS_ENV: test
+    # strategy:
+    #     matrix:
+    #       DATABASE_URL: ['postgresql://localhost/postgres']
+    #       POSTGRES_DB: ['postgres']
+    #       POSTGRES_USER: ['postgres']
+    #       POSTGRES_PASSWORD: ['password']
+    #       RAILS_ENV: ['test']
     services:
       db:
         env:
