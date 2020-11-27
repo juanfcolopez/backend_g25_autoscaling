@@ -16,7 +16,7 @@ Rails.application.configure do
   
   # Whitelist host
   config.hosts << "new-repo-elb-1457183078.us-east-1.elb.amazonaws.com"
-
+  config.hosts << "chat-for-nacho.tk"
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp/caching-dev.txt').exist?
