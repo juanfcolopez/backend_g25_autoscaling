@@ -44,7 +44,7 @@ jobs:
 
     steps:
       env: 
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: trust
     - uses: actions/checkout@v2
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
