@@ -5,8 +5,8 @@ After=docker.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-WorkingDirectory=/home/ubuntu/g25_backend
-ExecStart=/usr/bin/docker-compose -f /home/ubuntu/g25_backend/docker-compose.yml up -d --remove-orphans
+WorkingDirectory=/home/ubuntu/aws-codedeploy
+ExecStart=/usr/bin/docker-compose -f /home/ubuntu/aws-codedeploy/docker-compose.yml up -d --remove-orphans
 
 [Install]
 WantedBy=multi-user.target
